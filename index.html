@@ -1,446 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - Satu Insights</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #4b5563;
-            --light: #f9fafb;
-            --dark: #1f2937;
-            --accent: #f59e0b;
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark);
-            line-height: 1.6;
-            background-color: var(--light);
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        
-        /* Header */
-        header {
-            padding: 2rem 0;
-            background-color: white;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satu Insights</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
 
-		.logo img {
-		    height: 50px;
-		    width: auto;
-		    display: block;
-		}
-        
-        /* Hero Section */
-        .hero {
-            padding: 6rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-        }
-        
-        .hero-image {
-            margin-bottom: 2.5rem;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            color: var(--secondary);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 3rem;
-            margin-bottom: 2rem;
-        }
-        
-        .countdown-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            min-width: 100px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        
-        .countdown-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .countdown-label {
-            font-size: 0.875rem;
-            color: var(--secondary);
-            text-transform: uppercase;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 6rem 0;
-            background-color: white;
-        }
-        
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--dark);
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: var(--accent);
-            margin: 0.5rem auto;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .about-text {
-            font-size: 1.125rem;
-            color: var(--secondary);
-        }
-        
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .about-image {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Values Section */
-        .values {
-            padding: 6rem 0;
-            background-color: #f8fafc;
-        }
-        
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .value-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-        }
-        
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .value-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        
-        .value-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-        
-        .value-desc {
-            color: var(--secondary);
-        }
-        
-        /* Footer */
-        footer {
-            padding: 3rem 0;
-            background-color: var(--dark);
-            color: white;
-            text-align: center;
-        }
-        
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-        
-        .footer-text {
-            color: #d1d5db;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            transition: var(--transition);
-        }
-        
-        .social-link:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            color: #9ca3af;
-            font-size: 0.875rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 968px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .values-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 640px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .countdown {
-                flex-wrap: wrap;
-            }
-            
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-title {
-                font-size: 1.75rem;
-            }
-        }
-    </style>
+    header {
+      background: #111827;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+      color: #d1d5db;
+    }
+
+    nav {
+      background: #1f2937;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: #111827;
+    }
+
+    .hero-image, .about-image {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .hero-image img, .about-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Attribution styling */
+    .image-credit {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .image-credit a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .image-credit a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-	<header>
-	    <div class="container">
-	        <div class="logo">
-			    <img src="logo.png" alt="Satu Insights Logo">
-			</div>
-	    </div>
-	</header>
+  <header>
+    <h1>Satu Insights</h1>
+    <p>Transforming research into impactful strategies</p>
+  </header>
 
-	<!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <h2 class="section-title">About us</h2>
-            
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Satu Insights is a collective of experienced market research consultants with over 15 years of expertise, serving clients globally from our base in Southeast Asia.</p>
-                    <p>Our name, "Satu," means "One" in Malay and Indonesian, symbolizing our commitment to being the single, trusted research partner clients turn to for insightful, high-quality research solutions.</p>
-                    <p>At Satu Insights, we focus on delivering consistent, integrity-driven research that goes beyond simply providing data. We uncover real, actionable insights to help our clients make informed decisions with confidence.</p>
-                    <p>We don't just deliver data—we deliver value, expertise, and partnership.</p>
-                </div>
-                
-                <div class="about-image">
-				    <img src="picture2.jpeg" alt="Research team presenting insights to clients">
-				</div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-image">
-			    <img src="picture1.png" alt="Research team collaborating on data analysis">
-			</div>
-            
-            <h1>The Satu team is busy cooking out and testing out our best research recipes</h1>
-            <p>We will be sharing them soon!</p>
-            
-            <!--
-			<div class="countdown">
-                <div class="countdown-item">
-                    <div class="countdown-number" id="days">00</div>
-                    <div class="countdown-label">Days</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="hours">00</div>
-                    <div class="countdown-label">Hours</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="minutes">00</div>
-                    <div class="countdown-label">Minutes</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="seconds">00</div>
-                    <div class="countdown-label">Seconds</div>
-                </div>
-            </div>
-			-->
-        </div>
-    </section>
-    
-    <!-- Values Section -->
-    <section class="values">
-        <div class="container">
-            <h2 class="section-title">Our Values</h2>
-            
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">📊</div>
-                    <h3 class="value-title">Expertise</h3>
-                    <p class="value-desc">15+ years of market research experience across diverse industries and markets.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">🔍</div>
-                    <h3 class="value-title">Insightful</h3>
-                    <p class="value-desc">We go beyond data to provide actionable insights that drive business decisions.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3 class="value-title">Partnership</h3>
-                    <p class="value-desc">We work closely with clients as an extension of their teams to achieve mutual success.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-logo">Satu Insights</div>
-            
-            <p class="footer-text">Your trusted partner for insightful market research solutions</p>
-            
-            <div class="social-links">
-                <a href="#" class="social-link">✉️</a>
-                <a href="#" class="social-link">📱</a>
-                <a href="#" class="social-link">👥</a>
-            </div>
-            
-            <p class="copyright">© 2025 Satu Insights. All rights reserved.</p>
-        </div>
-    </footer>
-    
-    <script>
-        // Countdown Timer
-        function updateCountdown() {
-            // Set the launch date (30 days from now)
-            const launchDate = new Date();
-            launchDate.setDate(launchDate.getDate() + 30);
-            
-            const currentTime = new Date();
-            const diff = launchDate - currentTime;
-            
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('days').textContent = days.toString().padStart(2, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-        }
-        
-        // Initial call
-        updateCountdown();
-        
-        // Update every second
-        setInterval(updateCountdown, 1000);
-    </script>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="hero">
+    <h2>Welcome to Satu Insights</h2>
+    <div class="hero-image">
+      <img src="picture1.png" alt="Research team collaborating on data analysis">
+      <p class="image-credit">
+        Photo by <a href="https://unsplash.com/@humakabakci" target="_blank" rel="noopener noreferrer">Huma Kabakci</a> on Unsplash
+      </p>
+    </div>
+    <p style="text-align:center;">
+      We help businesses, organizations, and individuals uncover insights through deep research and meaningful analysis.
+    </p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="about-image">
+      <img src="picture2.jpeg" alt="Research team presenting insights to clients">
+      <p class="image-credit">
+        Photo by <a href="https://unsplash.com/@natalie_pedigo" target="_blank" rel="noopener noreferrer">Natalie Pedigo</a> on Unsplash
+      </p>
+    </div>
+    <p>
+      At Satu Insights, we believe data tells a story. Our mission is to bring clarity to complexity by combining qualitative and quantitative research methods. We deliver insights that empower better decisions and impactful strategies.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Market Research and Consumer Insights</li>
+      <li>Policy Research and Social Impact Studies</li>
+      <li>Data Visualization and Reporting</li>
+      <li>Workshops and Training in Research Methods</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align:center;">
+      Reach out to collaborate or learn more about how we can support your research needs.
+    </p>
+    <p style="text-align:center;">
+      📧 <a href="mailto:info@satuinsights.com">info@satuinsights.com</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Satu Insights. All rights reserved.</p>
+  </footer>
 </body>
 </html>
