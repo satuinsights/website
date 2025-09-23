@@ -39,19 +39,38 @@
         }
 
         .image-credit {
-            font-size: 12px;
-            color: gray;
-            text-align: center;
-            margin-top: 4px;
+            font-size: 11px !important;
+            color: #6b7280;
+            text-align: right;
+            margin-top: 6px;
+            padding: 4px 8px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 4px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-style: italic;
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+            line-height: 1.2;
+            font-weight: normal;
+        }
+
+        .image-credit:hover {
+            opacity: 1;
         }
 
         .image-credit a {
-            color: inherit;
+            color: var(--primary);
             text-decoration: none;
+            font-weight: 500;
         }
 
         .image-credit a:hover {
             text-decoration: underline;
+        }
+
+        .image-container {
+            position: relative;
         }
         
         /* Header */
@@ -321,6 +340,11 @@
             .section-title {
                 font-size: 1.75rem;
             }
+
+            .image-credit {
+                text-align: center;
+                font-size: 10px;
+            }
         }
     </style>
 </head>
@@ -347,12 +371,14 @@
                     <p>We don't just deliver data—we deliver value, expertise, and partnership.</p>
                 </div>
                 
-                <div class="about-image">
-				    <img src="picture2.jpeg" alt="Research team presenting insights to clients">
+                <div class="image-container">
+                    <div class="about-image">
+				        <img src="picture2.jpeg" alt="Research team presenting insights to clients">
+				    </div>
                     <p class="image-credit">
-                        © Photo by <a href="https://unsplash.com/@natalie_pedigo" target="_blank" rel="noopener noreferrer">Natalie Pedigo</a> on Unsplash
+                        Photo by <a href="https://unsplash.com/@natalie_pedigo" target="_blank" rel="noopener noreferrer">Natalie Pedigo</a> on Unsplash
                     </p>
-				</div>
+                </div>
             </div>
         </div>
     </section>
@@ -360,12 +386,14 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-image">
-			    <img src="picture1.png" alt="Research team collaborating on data analysis">
-				<p class="image-credit">
-	                © Photo by <a href="https://unsplash.com/@humakabakci" target="_blank" rel="noopener noreferrer">Huma Kabakci</a> on Unsplash
-    	        </p>
-			</div>
+            <div class="image-container">
+                <div class="hero-image">
+			        <img src="picture1.png" alt="Research team collaborating on data analysis">
+			    </div>
+                <p class="image-credit">
+                    Photo by <a href="https://unsplash.com/@humakabakci" target="_blank" rel="noopener noreferrer">Huma Kabakci</a> on Unsplash
+                </p>
+            </div>
             
             <h1>The Satu team is busy cooking and testing out our best research recipes</h1>
             <p>We will be sharing them soon!</p>
