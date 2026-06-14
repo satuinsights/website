@@ -1034,3 +1034,236 @@ ul {
     animation: none;
   }
 }
+
+/* --- SATU INSIGHTS STYLE UPDATES --- */
+.site-nav a {
+  color: #FFFFFF;
+}
+
+.nav-cta {
+  background: #FFFFFF;
+  color: #101216 !important;
+}
+
+.nav-cta:hover,
+.nav-cta.active {
+  background: #f0f0f0;
+  color: #101216 !important;
+}
+
+.white-bg-wrapper {
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.white-bg-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('../img/Picture1.png');
+  background-size: auto 110vh; /* Besar namun tidak memenuhi seluruh layar */
+  background-position: left center; /* Ditaruh di kiri, kemudian di-flip ke kanan */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transform: scaleX(-1); /* Mirror secara horizontal */
+  opacity: 0.06; /* Sedikit dinaikkan karena sekarang hanya di kanan */
+  pointer-events: none;
+  z-index: 0;
+}
+
+.white-bg-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  background-color: transparent;
+  color: #101216;
+}
+
+.site-footer {
+  background: transparent !important;
+  color: #FFFFFF !important;
+  border-top: none !important;
+}
+
+.section p,
+.lead,
+.section-title,
+.tagline,
+.sub-heading,
+.footer-tagline,
+.footer-copy,
+.founder-bio h3,
+.founder-bio p,
+.contact-direct h2,
+.contact-direct p,
+.bullet-list li {
+  color: #101216;
+}
+
+.founder-contact a,
+.contact-direct a,
+.closing-contact a {
+  color: #412CB7;
+}
+
+.footer-tagline,
+.footer-copy {
+  color: #FFFFFF !important;
+}
+
+.bullet-list li::before {
+  background: #412CB7;
+}
+
+.card,
+.value-card,
+.method-card,
+.industry-item,
+.feature,
+.service-block,
+.contact-form {
+  background-color: #412CB7 !important;
+  color: #FFFFFF !important;
+  border-color: transparent !important;
+}
+
+.card:hover,
+.value-card:hover,
+.method-card:hover,
+.industry-item:hover,
+.feature:hover {
+  background-color: #352396 !important;
+}
+
+.card h3,
+.value-card h3,
+.method-character h3,
+.industry-item h3,
+.feature h3,
+.service-block h2,
+.service-details h4 {
+  color: #FFFFFF !important;
+}
+
+.card p,
+.value-card p,
+.method-card p,
+.industry-item p,
+.feature p,
+.service-tagline {
+  color: #FFFFFF !important;
+}
+
+.feature-icon {
+  color: #FFFFFF !important;
+}
+
+/* Update inputs inside contact form for contrast */
+.form-group label {
+  color: #FFFFFF !important;
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #FFFFFF !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* --- ADDITIONAL UPDATES --- */
+.hero h1,
+.page-hero h1,
+.hero-sub,
+.page-sub {
+  color: #FFFFFF !important;
+}
+
+.hero-sub,
+.page-sub {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroFadeUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.15s;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: #FFFFFF !important;
+}
+
+.site-nav a::after {
+  background: #FFFFFF !important;
+}
+
+.service-block,
+.service-block *,
+.service-block .sub-heading,
+.service-block p,
+.service-block .bullet-list li {
+  color: #FFFFFF !important;
+}
+
+.service-block .bullet-list li::before {
+  background: #FFFFFF !important;
+}
+
+.btn {
+  background-color: #71AEAF !important;
+  border-color: #71AEAF !important;
+  color: #FFFFFF !important;
+}
+
+.btn:hover {
+  background-color: #5c9293 !important;
+  border-color: #5c9293 !important;
+}
+
+.site-header {
+  background: transparent !important;
+  border-bottom: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+.site-header.is-scrolled {
+  background: rgba(26, 47, 110, 0.95) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.section+.section {
+  border-top: none !important;
+}
+
+.site-footer {
+  border-top: none !important;
+}
+
+.ambient-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/Picture1.png');
+  background-size: auto 110vh;
+  background-position: left center; /* Ditaruh di kiri lalu di-flip ke kanan */
+  background-repeat: no-repeat;
+  transform: scaleX(-1); /* Mirror secara horizontal */
+  mix-blend-mode: overlay;
+  opacity: 0.25;
+  pointer-events: none;
+}
