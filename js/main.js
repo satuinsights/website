@@ -41,7 +41,7 @@
   function initScrollReveal() {
     // Auto add reveal to common elements for better fade-up animation
     document.querySelectorAll('main section p, main section h2, main section h3, main section li, main section .btn, main section img').forEach(function (el) {
-      if (!el.classList.contains('reveal') && !el.closest('.card, .feature, .industry-item, .method-card, .founder-photo')) {
+      if (!el.classList.contains('reveal') && !el.classList.contains('hero-animate') && !el.closest('.card, .feature, .industry-item, .method-card, .founder-photo')) {
         el.classList.add('reveal');
       }
     });
