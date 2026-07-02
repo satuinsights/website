@@ -1,453 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - Satu Insights</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #4b5563;
-            --light: #f9fafb;
-            --dark: #1f2937;
-            --accent: #f59e0b;
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark);
-            line-height: 1.6;
-            background-color: var(--light);
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        .image-credit {
-            font-size: 11px !important;
-            color: #6b7280;
-            text-align: right;
-            margin-top: 2px;
-            margin-bottom: 0;
-            padding: 4px 8px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 4px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-style: italic;
-            opacity: 0.8;
-            transition: opacity 0.2s ease;
-            line-height: 1.2;
-            font-weight: normal;
-        }
-
-        .image-credit:hover {
-            opacity: 1;
-        }
-
-        .image-credit a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .image-credit a:hover {
-            text-decoration: underline;
-        }
-
-        .image-container {
-            position: relative;
-            margin-bottom: 2.5rem;
-        }
-
-        .image-container .image-credit {
-            margin-top: -2px;
-        }
-        
-        /* Header */
-        header {
-            padding: 2rem 0;
-            background-color: white;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-        }
-
-		.logo img {
-		    height: 50px;
-		    width: auto;
-		    display: block;
-		}
-        
-        /* Hero Section */
-        .hero {
-            padding: 6rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-        }
-        
-        .hero-image {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 0;
-        }
-        
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            color: var(--secondary);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 3rem;
-            margin-bottom: 2rem;
-        }
-        
-        .countdown-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            min-width: 100px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        
-        .countdown-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .countdown-label {
-            font-size: 0.875rem;
-            color: var(--secondary);
-            text-transform: uppercase;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 6rem 0;
-            background-color: white;
-        }
-        
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--dark);
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: var(--accent);
-            margin: 0.5rem auto;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .about-text {
-            font-size: 1.125rem;
-            color: var(--secondary);
-        }
-        
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .about-image {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Values Section */
-        .values {
-            padding: 6rem 0;
-            background-color: #f8fafc;
-        }
-        
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .value-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-        }
-        
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .value-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        
-        .value-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-        
-        .value-desc {
-            color: var(--secondary);
-        }
-        
-        /* Footer */
-        footer {
-            padding: 3rem 0;
-            background-color: var(--dark);
-            color: white;
-            text-align: center;
-        }
-        
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-        
-        .footer-text {
-            color: #d1d5db;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            transition: var(--transition);
-        }
-        
-        .social-link:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            color: #9ca3af;
-            font-size: 0.875rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 968px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .values-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 640px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .countdown {
-                flex-wrap: wrap;
-            }
-            
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-title {
-                font-size: 1.75rem;
-            }
-
-            .image-credit {
-                text-align: center;
-                font-size: 10px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satu Insights | Market Research, Southeast Asia</title>
+  <meta name="description"
+    content="We help organisations across Southeast Asia and beyond make confident decisions through rigorous, grounded market research.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <!-- Header -->
-	<header>
-	    <div class="container">
-	        <div class="logo">
-			    <img src="logo.png" alt="Satu Insights Logo">
-			</div>
-	    </div>
-	</header>
 
-	<!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <h2 class="section-title">About us</h2>
-            
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Satu Insights is a collective of experienced market research consultants with over 15 years of expertise, serving clients globally from our base in Southeast Asia.</p>
-                    <p>Our name, "Satu," means "One" in Malay and Indonesian, symbolizing our commitment to being the single, trusted research partner clients turn to for insightful, high-quality research solutions.</p>
-                    <p>At Satu Insights, we focus on delivering consistent, integrity-driven research that goes beyond simply providing data. We uncover real, actionable insights to help our clients make informed decisions with confidence.</p>
-                    <p>We don't just deliver data—we deliver value, expertise, and partnership.</p>
-                </div>
-                
-                <div class="image-container">
-                    <div class="about-image">
-				        <img src="picture2.jpeg" alt="Research team presenting insights to clients">
-				    </div>
-                    <p class="image-credit">
-                        Photo by <a href="https://unsplash.com/@natalie_pedigo" target="_blank" rel="noopener noreferrer">Natalie Pedigo</a> on Unsplash
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Hero Section -->
+<body>
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Satu Insights Logo" class="logo-img">
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
     <section class="hero">
-        <div class="container">
-            <div class="image-container">
-                <div class="hero-image">
-			        <img src="picture1.png" alt="Research team collaborating on data analysis">
-			    </div>
-                <p class="image-credit">
-                    Photo by <a href="https://unsplash.com/@humakabakci" target="_blank" rel="noopener noreferrer">Huma Kabakci</a> on Unsplash
-                </p>
-            </div>
-            
-            <h1>The Satu team is busy cooking and testing out our best research recipes</h1>
-            <p>We will be sharing them soon!</p>
-        </div>
+      <div class="container">
+        <h1 class="hero-animate"><span style="color: #292F7F;">Thoughtful research.</span><br>Clear direction.</h1>
+        <p class="hero-sub hero-animate hero-animate-delay-1">We help organisations across Southeast Asia and beyond
+          make confident decisions through rigorous, grounded market research.</p>
+        <a href="contact.html" class="btn hero-animate hero-animate-delay-2">Let's talk</a>
+      </div>
     </section>
-    
-    <!-- Values Section -->
-    <section class="values">
-        <div class="container">
-            <h2 class="section-title">Our Values</h2>
-            
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">📊</div>
-                    <h3 class="value-title">Expertise</h3>
-                    <p class="value-desc">15+ years of market research experience across diverse industries and markets.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">🔍</div>
-                    <h3 class="value-title">Insightful</h3>
-                    <p class="value-desc">We go beyond data to provide actionable insights that drive business decisions.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3 class="value-title">Partnership</h3>
-                    <p class="value-desc">We work closely with clients as an extension of their teams to achieve mutual success.</p>
-                </div>
-            </div>
+
+    <div class="white-bg-wrapper">
+      <section class="section intro-section">
+        <div class="container reveal intro-grid">
+          <div class="intro-left">
+            <p class="lead">At Satu Insights,<br>quality is not an aspiration.<br>It is the baseline.</p>
+          </div>
+          <div class="intro-right">
+            <p>We are a small collective of experienced market researchers, based in Southeast Asia and working with
+              clients globally. Our work is careful, considered, and focused on one thing: turning complex questions
+              into clear, actionable direction.</p>
+            <p>We don't believe in rushed insight or padded reports. We believe in getting it right.</p>
+            <p class="tagline">One Team. One Focus. Quality Research.</p>
+          </div>
         </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
+      </section>
+
+      <section class="section" style="background-color: #8CA7A9;">
         <div class="container">
-            <div class="footer-logo">Satu Insights</div>
-            
-            <p class="footer-text">Your trusted partner for insightful market research solutions</p>
-            
-            <div class="social-links">
-                <a href="#" class="social-link">✉️</a>
-                <a href="#" class="social-link">📱</a>
-                <a href="#" class="social-link">👥</a>
+          <h2 class="section-title reveal" style="margin-bottom: 2rem;">What We Do</h2>
+          <div class="corrigan-list reveal">
+            <div class="corrigan-item">
+              <h3>Market Research</h3>
+              <p>Qualitative and quantitative research designed around your business question, not a template. From
+                study
+                design through to clear, decision-ready findings.</p>
             </div>
-            
-            <p class="copyright">© 2025 Satu Insights. All rights reserved.</p>
+            <div class="corrigan-item">
+              <h3>Strategy and Advisory</h3>
+              <p>Translating research into direction. We help teams move from understanding to action, with confidence.
+              </p>
+            </div>
+            <div class="corrigan-item">
+              <h3>Research Support</h3>
+              <p>Flexible, senior-level research assistance for agencies and teams who need an experienced partner
+                without
+                the agency overhead.</p>
+            </div>
+          </div>
         </div>
-    </footer>
+      </section>
+
+      <section class="section feature-section" style="background-color: #FFFFFF;">
+        <div class="container">
+          <h2 class="section-title reveal" style="text-align: center; margin-bottom: 3rem;">Why Clients Work With Us
+          </h2>
+          <div class="clove-grid reveal">
+            <div class="clove-item">
+              <!-- Microscope SVG -->
+              <svg class="clove-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#292F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 18h8"/>
+                <path d="M3 22h18"/>
+                <path d="M14 22a7 7 0 1 0 0-14h-1"/>
+                <path d="M9 14h2"/>
+                <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/>
+                <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/>
+              </svg>
+              <h3>Solid research grounding</h3>
+              <p>Every member of the Satu team is a formally trained market researcher with 6 or more years of hands-on
+                experience. You get senior thinking on every project, not just at the proposal stage.</p>
+            </div>
+            <div class="clove-item">
+              <!-- Layers SVG -->
+              <svg class="clove-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#292F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 12 12 17 22 12"/>
+                <polyline points="2 17 12 22 22 17"/>
+              </svg>
+              <h3>Deep generalists</h3>
+              <p>We immerse ourselves in each client's world, their industry, their audience, their category, before we
+                design a single question. Context shapes everything we do.</p>
+            </div>
+            <div class="clove-item">
+              <!-- Crown SVG -->
+              <svg class="clove-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#292F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/>
+              </svg>
+              <h3>Fully independent</h3>
+              <p>No layers, no handoffs, no agency overhead. Clients work directly with the researchers doing the work.
+                That keeps us agile, transparent, and genuinely accountable.</p>
+            </div>
+            <div class="clove-item">
+              <!-- Award SVG -->
+              <svg class="clove-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#292F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="7"/>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+              </svg>
+              <h3>Quality obsessed (in the best way)</h3>
+              <p>Data only has value when it is accurate and meaningful. We take the time to get it right, because your
+                decisions depend on it.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pill-cta-wrapper">
+        <div class="container reveal">
+          <div class="pill-cta">
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <h2 class="section-title" style="color: #292F7F; margin-bottom: 0;">Start a Conversation</h2>
+              <p class="lead" style="margin-bottom: 0;">If you are navigating a complex question and want a research
+                partner who brings clarity and
+                care, we would love to hear from you.</p>
+            </div>
+            <a href="contact.html" class="btn pill-btn">Contact us</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-tagline">One Team. One Focus. Quality Research.</p>
+      <p class="footer-copy">&copy; 2026 Satu Insights. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>
