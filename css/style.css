@@ -1527,6 +1527,42 @@ a.service-intel-card:focus-visible {
   font-size: 0.95rem;
 }
 
+.contact-social {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid #0A66C2;
+  background: rgba(10, 102, 194, 0.05);
+  color: #0A66C2 !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(10, 102, 194, 0.12);
+}
+
+.contact-linkedin-link:hover {
+  background: #0A66C2;
+  border-color: #0A66C2;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(10, 102, 194, 0.3);
+}
+
+.contact-linkedin-link svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
 /* Footer */
 .site-footer {
   padding: 3rem 0;
