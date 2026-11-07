@@ -886,7 +886,7 @@ a.service-intel-card:focus-visible {
    ========================================================================== */
 .market-deepdive-section {
   background-color: #292F7F !important;
-  padding: 5rem 0 6rem;
+  padding: 4rem 0 0 !important;
   scroll-margin-top: 1rem;
 }
 
@@ -894,12 +894,13 @@ a.service-intel-card:focus-visible {
   display: grid;
   grid-template-columns: 2.2fr 3.8fr;
   gap: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  padding-top: 4.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0;
 }
 
 .market-deepdive-left {
-  padding-right: 4rem;
+  padding: 3.5rem 4rem 3.5rem 0;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
@@ -933,7 +934,8 @@ a.service-intel-card:focus-visible {
 
 .market-deepdive-statement {
   padding-left: 4rem;
-  padding-bottom: 3rem;
+  padding-top: 3.5rem;
+  padding-bottom: 2.75rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -950,16 +952,19 @@ a.service-intel-card:focus-visible {
 .market-deepdive-lower {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: 3rem;
+  padding-top: 0;
+  padding-bottom: 3.5rem;
 }
 
 .market-deepdive-col-a {
+  padding-top: 2.5rem;
   padding-left: 4rem;
   padding-right: 3rem;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .market-deepdive-col-b {
+  padding-top: 2.5rem;
   padding-left: 3.5rem;
 }
 
@@ -1037,7 +1042,7 @@ a.service-intel-card:focus-visible {
    ========================================================================== */
 .strategy-deepdive-section {
   background-color: #292F7F !important;
-  padding: 5rem 0 6rem;
+  padding: 0 !important;
   scroll-margin-top: 1rem;
 }
 
@@ -1045,12 +1050,12 @@ a.service-intel-card:focus-visible {
   display: grid;
   grid-template-columns: 2.2fr 3.8fr;
   gap: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  padding-top: 4.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0;
 }
 
 .strategy-deepdive-left {
-  padding-right: 4rem;
+  padding: 3.5rem 4rem 3.5rem 0;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
@@ -1098,7 +1103,8 @@ a.service-intel-card:focus-visible {
 
 .strategy-deepdive-statement {
   padding-left: 4rem;
-  padding-bottom: 3rem;
+  padding-top: 3.5rem;
+  padding-bottom: 2.75rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
 }
@@ -1128,7 +1134,8 @@ a.service-intel-card:focus-visible {
 
 .strategy-deepdive-lower {
   padding-left: 4rem;
-  padding-top: 3.5rem;
+  padding-top: 2.75rem;
+  padding-bottom: 3.5rem;
 }
 
 /* Matrix Framework */
@@ -1223,7 +1230,7 @@ a.service-intel-card:focus-visible {
    ========================================================================== */
 .support-deepdive-section {
   background-color: #292F7F !important;
-  padding: 5rem 0 6rem;
+  padding: 0 0 5.5rem !important;
   scroll-margin-top: 1rem;
 }
 
@@ -1231,12 +1238,11 @@ a.service-intel-card:focus-visible {
   display: grid;
   grid-template-columns: 2.2fr 3.8fr;
   gap: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  padding-top: 4.5rem;
+  padding: 0;
 }
 
 .support-deepdive-left {
-  padding-right: 4rem;
+  padding: 3.5rem 4rem 3.5rem 0;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
@@ -1271,7 +1277,8 @@ a.service-intel-card:focus-visible {
 
 .support-deepdive-statement {
   padding-left: 4rem;
-  padding-bottom: 3rem;
+  padding-top: 3.5rem;
+  padding-bottom: 2.75rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
