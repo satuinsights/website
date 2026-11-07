@@ -793,6 +793,25 @@ p {
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
 }
 
+a.service-intel-card {
+  text-decoration: none !important;
+  color: #FFFFFF !important;
+  cursor: pointer;
+}
+
+a.service-intel-card:hover {
+  opacity: 1 !important;
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.48);
+  background-color: rgba(255, 255, 255, 0.065);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
+a.service-intel-card:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 4px;
+}
+
 .service-intel-icon-wrap {
   width: 104px;
   height: 104px;
@@ -860,6 +879,157 @@ p {
   font-weight: 400;
   margin: 0 !important;
   text-align: center !important;
+}
+
+/* ==========================================================================
+   Market Research Deep Dive Section (Below Our Services)
+   ========================================================================== */
+.market-deepdive-section {
+  background-color: #292F7F !important;
+  padding: 5rem 0 6rem;
+  scroll-margin-top: 1rem;
+}
+
+.market-deepdive-layout {
+  display: grid;
+  grid-template-columns: 2.2fr 3.8fr;
+  gap: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding-top: 4.5rem;
+}
+
+.market-deepdive-left {
+  padding-right: 4rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.market-deepdive-title {
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: #FFFFFF !important;
+  margin-bottom: 2rem;
+  text-align: left !important;
+}
+
+.market-deepdive-subtitle {
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.88) !important;
+  text-align: left !important;
+  margin: 0 !important;
+}
+
+.market-deepdive-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.market-deepdive-statement {
+  padding-left: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.market-deepdive-statement p {
+  font-size: clamp(1.2rem, 1.85vw, 1.55rem);
+  line-height: 1.45;
+  font-weight: 400;
+  color: #FFFFFF !important;
+  margin: 0 !important;
+  text-align: left !important;
+  max-width: 700px;
+}
+
+.market-deepdive-lower {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 3rem;
+}
+
+.market-deepdive-col-a {
+  padding-left: 4rem;
+  padding-right: 3rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.market-deepdive-col-b {
+  padding-left: 3.5rem;
+}
+
+.market-deepdive-letter {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65) !important;
+  margin-bottom: 1.85rem;
+}
+
+.market-deepdive-col-title {
+  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+  font-weight: 700;
+  color: #FFFFFF !important;
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+  text-align: left !important;
+}
+
+.market-deepdive-item {
+  margin-bottom: 2.25rem;
+}
+
+.market-deepdive-item:last-child {
+  margin-bottom: 0;
+}
+
+.market-deepdive-item h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.market-deepdive-item p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.88) !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.market-deepdive-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.market-deepdive-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.02);
+  color: #FFFFFF !important;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  transition: all 0.3s ease;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.market-deepdive-pill:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
 }
 
 /* Experience */
@@ -1950,6 +2120,63 @@ p {
     margin-bottom: 2.5rem !important;
   }
 
+  .market-deepdive-layout {
+    grid-template-columns: 1fr;
+    border-top: none;
+    padding-top: 2rem;
+  }
+
+  .market-deepdive-left {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-right: 0;
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .market-deepdive-title,
+  .market-deepdive-subtitle {
+    text-align: center !important;
+  }
+
+  .market-deepdive-statement {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .market-deepdive-statement p {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .market-deepdive-lower {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .market-deepdive-col-a {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2.5rem;
+  }
+
+  .market-deepdive-col-b {
+    padding-left: 0;
+  }
+
+  .market-deepdive-pills {
+    align-items: stretch;
+  }
+
+  .market-deepdive-pill {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
   /* Center headline text on mobile/tablet */
   .hero h1,
   .page-hero h1,
@@ -1973,12 +2200,21 @@ p {
   }
 }
 
-/* Force pure white font for Services cards section */
+/* Force pure white font for Services cards section and Market Deepdive */
 .services-intel-section h2,
 .services-intel-section h3,
 .services-intel-section p,
 .services-intel-section .service-intel-subtitle,
 .services-intel-section .service-intel-desc,
-.services-intel-section * {
+.services-intel-section *,
+.market-deepdive-section h2,
+.market-deepdive-section h3,
+.market-deepdive-section h4,
+.market-deepdive-section p,
+.market-deepdive-section * {
   color: #FFFFFF !important;
+}
+
+.market-deepdive-letter {
+  color: rgba(255, 255, 255, 0.65) !important;
 }

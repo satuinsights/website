@@ -75,7 +75,7 @@
   }
 
   function initStaggerGrids() {
-    var grids = document.querySelectorAll('.card-grid, .industry-grid, .methods-grid, .service-details, .services-intel-grid');
+    var grids = document.querySelectorAll('.card-grid, .industry-grid, .methods-grid, .service-details, .services-intel-grid, .market-deepdive-pills');
 
     grids.forEach(function (grid) {
       var children = grid.children;
