@@ -1032,6 +1032,192 @@ a.service-intel-card:focus-visible {
   transform: translateX(4px);
 }
 
+/* ==========================================================================
+   Strategy and Advisory Deep Dive Section
+   ========================================================================== */
+.strategy-deepdive-section {
+  background-color: #292F7F !important;
+  padding: 5rem 0 6rem;
+  scroll-margin-top: 1rem;
+}
+
+.strategy-deepdive-layout {
+  display: grid;
+  grid-template-columns: 2.2fr 3.8fr;
+  gap: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding-top: 4.5rem;
+}
+
+.strategy-deepdive-left {
+  padding-right: 4rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.strategy-deepdive-title {
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: #FFFFFF !important;
+  margin-bottom: 2rem;
+  text-align: left !important;
+}
+
+.strategy-deepdive-subtitle {
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.88) !important;
+  text-align: left !important;
+  margin: 0 !important;
+}
+
+/* Decorative Chevron along vertical divider */
+.strategy-divider-chevron-left {
+  position: absolute;
+  right: -6px;
+  top: 70%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.strategy-deepdive-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.strategy-deepdive-statement {
+  padding-left: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.strategy-deepdive-statement p {
+  font-size: clamp(1.2rem, 1.85vw, 1.55rem);
+  line-height: 1.45;
+  font-weight: 400;
+  color: #FFFFFF !important;
+  margin: 0 !important;
+  text-align: left !important;
+  max-width: 740px;
+}
+
+/* Decorative Chevron along horizontal divider */
+.strategy-divider-chevron-top {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.strategy-deepdive-lower {
+  padding-left: 4rem;
+  padding-top: 3.5rem;
+}
+
+/* Matrix Framework */
+.strategy-matrix-wrap {
+  position: relative;
+  padding: 1rem 2rem 2.5rem 0;
+}
+
+/* Coordinate axes */
+.matrix-axis-horizontal {
+  position: absolute;
+  top: calc(50% - 0.75rem);
+  left: -1rem;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.matrix-axis-horizontal .matrix-arrow-right {
+  position: absolute;
+  right: -2px;
+  top: -5px;
+}
+
+.matrix-axis-vertical {
+  position: absolute;
+  left: calc(50% - 1rem);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.matrix-axis-vertical .matrix-arrow-down {
+  position: absolute;
+  bottom: -2px;
+  left: -5px;
+}
+
+.strategy-matrix-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.25rem 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.strategy-matrix-card {
+  background: #252b75;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 1.85rem 1.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  min-height: 115px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.strategy-matrix-card:hover {
+  transform: translateY(-4px);
+  background: #2f368c;
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+.strategy-matrix-text {
+  font-size: clamp(0.98rem, 1.25vw, 1.12rem);
+  font-weight: 600;
+  line-height: 1.35;
+  color: #FFFFFF !important;
+  text-align: left;
+}
+
+.strategy-matrix-chevron {
+  flex-shrink: 0;
+  width: 14px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.strategy-matrix-card:hover .strategy-matrix-chevron {
+  transform: translateX(3px);
+}
+
 /* Experience */
 .industry-grid {
   display: grid;
@@ -2177,6 +2363,63 @@ a.service-intel-card:focus-visible {
     text-align: center;
   }
 
+  .strategy-deepdive-layout {
+    grid-template-columns: 1fr;
+    border-top: none;
+    padding-top: 2rem;
+  }
+
+  .strategy-deepdive-left {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-right: 0;
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .strategy-divider-chevron-left {
+    display: none;
+  }
+
+  .strategy-deepdive-title,
+  .strategy-deepdive-subtitle {
+    text-align: center !important;
+  }
+
+  .strategy-deepdive-statement {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .strategy-deepdive-statement p {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .strategy-divider-chevron-top {
+    display: none;
+  }
+
+  .strategy-deepdive-lower {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .strategy-matrix-wrap {
+    padding: 0;
+  }
+
+  .strategy-matrix-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .matrix-axis-horizontal,
+  .matrix-axis-vertical {
+    display: none;
+  }
+
   /* Center headline text on mobile/tablet */
   .hero h1,
   .page-hero h1,
@@ -2200,7 +2443,7 @@ a.service-intel-card:focus-visible {
   }
 }
 
-/* Force pure white font for Services cards section and Market Deepdive */
+/* Force pure white font for Services cards section, Market Deepdive and Strategy Deepdive */
 .services-intel-section h2,
 .services-intel-section h3,
 .services-intel-section p,
@@ -2211,7 +2454,13 @@ a.service-intel-card:focus-visible {
 .market-deepdive-section h3,
 .market-deepdive-section h4,
 .market-deepdive-section p,
-.market-deepdive-section * {
+.market-deepdive-section *,
+.strategy-deepdive-section h2,
+.strategy-deepdive-section h3,
+.strategy-deepdive-section h4,
+.strategy-deepdive-section p,
+.strategy-deepdive-section strong,
+.strategy-deepdive-section * {
   color: #FFFFFF !important;
 }
 
