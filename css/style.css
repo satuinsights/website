@@ -746,6 +746,122 @@ p {
   margin-top: 1.75rem;
 }
 
+/* ==========================================================================
+   Comprehensive Market Intelligence and Advisory Capabilities (Services Cards)
+   ========================================================================== */
+.services-intel-section {
+  background-color: #292F7F !important;
+  padding: 5rem 0 6rem;
+}
+
+.services-intel-title {
+  color: #FFFFFF !important;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 3.5rem;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.services-intel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+  align-items: stretch;
+}
+
+.service-intel-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  padding: 3.5rem 2.2rem 3.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center !important;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.35s ease,
+              background-color 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.service-intel-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.45);
+  background-color: rgba(255, 255, 255, 0.055);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+}
+
+.service-intel-icon-wrap {
+  width: 104px;
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: transform 0.35s ease;
+}
+
+.service-intel-icon-wrap svg,
+.service-intel-icon-wrap img,
+.service-intel-img {
+  width: 104px;
+  height: 104px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.service-intel-card:hover .service-intel-icon-wrap {
+  transform: scale(1.08);
+}
+
+.service-intel-card h3 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.01em;
+  text-align: center !important;
+}
+
+.service-intel-card p {
+  color: #FFFFFF !important;
+  text-align: center !important;
+}
+
+.service-intel-card p.service-intel-subtitle {
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #FFFFFF !important;
+  line-height: 1.4;
+  min-height: 2.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+  margin-bottom: 0 !important;
+}
+
+.service-intel-divider {
+  width: 100px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 1.75rem auto 1.75rem;
+}
+
+.service-intel-card p.service-intel-desc {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #FFFFFF !important;
+  font-weight: 400;
+  margin: 0 !important;
+  text-align: center !important;
+}
+
 /* Experience */
 .industry-grid {
   display: grid;
@@ -1818,6 +1934,22 @@ p {
     padding-bottom: 0;
   }
 
+  .services-intel-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .service-intel-subtitle {
+    min-height: auto !important;
+  }
+
+  .services-intel-title {
+    text-align: center !important;
+    margin-bottom: 2.5rem !important;
+  }
+
   /* Center headline text on mobile/tablet */
   .hero h1,
   .page-hero h1,
@@ -1839,4 +1971,14 @@ p {
   .intro-left .lead::before {
     display: none !important;
   }
+}
+
+/* Force pure white font for Services cards section */
+.services-intel-section h2,
+.services-intel-section h3,
+.services-intel-section p,
+.services-intel-section .service-intel-subtitle,
+.services-intel-section .service-intel-desc,
+.services-intel-section * {
+  color: #FFFFFF !important;
 }

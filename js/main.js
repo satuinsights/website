@@ -75,7 +75,7 @@
   }
 
   function initStaggerGrids() {
-    var grids = document.querySelectorAll('.card-grid, .industry-grid, .methods-grid, .service-details');
+    var grids = document.querySelectorAll('.card-grid, .industry-grid, .methods-grid, .service-details, .services-intel-grid');
 
     grids.forEach(function (grid) {
       var children = grid.children;
