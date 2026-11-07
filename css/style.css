@@ -1218,6 +1218,149 @@ a.service-intel-card:focus-visible {
   transform: translateX(3px);
 }
 
+/* ==========================================================================
+   Research Support Deep Dive Section
+   ========================================================================== */
+.support-deepdive-section {
+  background-color: #292F7F !important;
+  padding: 5rem 0 6rem;
+  scroll-margin-top: 1rem;
+}
+
+.support-deepdive-layout {
+  display: grid;
+  grid-template-columns: 2.2fr 3.8fr;
+  gap: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding-top: 4.5rem;
+}
+
+.support-deepdive-left {
+  padding-right: 4rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.support-deepdive-title {
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: #FFFFFF !important;
+  margin-bottom: 2rem;
+  text-align: left !important;
+}
+
+.support-deepdive-subtitle {
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.88) !important;
+  text-align: left !important;
+  margin: 0 !important;
+}
+
+.support-deepdive-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.support-deepdive-statement {
+  padding-left: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.support-deepdive-statement p {
+  font-size: clamp(1.2rem, 1.85vw, 1.55rem);
+  line-height: 1.45;
+  font-weight: 400;
+  color: #FFFFFF !important;
+  margin: 0 !important;
+  text-align: left !important;
+  max-width: 740px;
+}
+
+.support-deepdive-statement .support-highlight-region {
+  color: #7FA5EE !important;
+  font-weight: 600;
+}
+
+.support-deepdive-lower {
+  padding: 0;
+  margin: 0;
+}
+
+/* 3x2 Features Grid */
+.support-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.support-feature-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 1.75rem 1.25rem 2rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Internal grid dividing lines (connecting directly with top line & left line to form boxes) */
+.support-feature-cell:nth-child(1),
+.support-feature-cell:nth-child(2),
+.support-feature-cell:nth-child(4),
+.support-feature-cell:nth-child(5) {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.support-feature-cell:nth-child(1),
+.support-feature-cell:nth-child(2),
+.support-feature-cell:nth-child(3) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.support-feature-cell:hover {
+  background-color: rgba(255, 255, 255, 0.035);
+}
+
+.support-icon-wrap {
+  width: 100px;
+  height: 100px;
+  margin-top: 0;
+  margin-bottom: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.support-feature-cell:hover .support-icon-wrap {
+  transform: scale(1.1);
+}
+
+.support-feature-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.support-feature-title {
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #FFFFFF !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
+
 /* Experience */
 .industry-grid {
   display: grid;
@@ -2406,7 +2549,8 @@ a.service-intel-card:focus-visible {
     padding-top: 2rem;
   }
 
-  .strategy-matrix-wrap {
+  .strategy-matrix-wrap,
+  .strategy-matrix-container {
     padding: 0;
   }
 
@@ -2416,8 +2560,71 @@ a.service-intel-card:focus-visible {
   }
 
   .matrix-axis-horizontal,
-  .matrix-axis-vertical {
+  .matrix-axis-vertical,
+  .matrix-boundary-top,
+  .matrix-boundary-left,
+  .matrix-axis-h,
+  .matrix-axis-v {
     display: none;
+  }
+
+  /* Research Support responsive layout */
+  .support-deepdive-layout {
+    grid-template-columns: 1fr;
+    border-top: none;
+    padding-top: 2rem;
+  }
+
+  .support-deepdive-left {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-right: 0;
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .support-deepdive-title,
+  .support-deepdive-subtitle {
+    text-align: center !important;
+  }
+
+  .support-deepdive-statement {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .support-deepdive-statement p {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .support-deepdive-lower {
+    padding: 0;
+  }
+
+  .support-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .support-feature-cell:nth-child(even) {
+    border-right: none !important;
+  }
+
+  .support-feature-cell:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.18) !important;
+  }
+
+  .support-feature-cell:nth-child(1),
+  .support-feature-cell:nth-child(2),
+  .support-feature-cell:nth-child(3),
+  .support-feature-cell:nth-child(4) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+  }
+
+  .support-feature-cell:nth-child(5),
+  .support-feature-cell:nth-child(6) {
+    border-bottom: none !important;
   }
 
   /* Center headline text on mobile/tablet */
@@ -2443,7 +2650,23 @@ a.service-intel-card:focus-visible {
   }
 }
 
-/* Force pure white font for Services cards section, Market Deepdive and Strategy Deepdive */
+@media (max-width: 600px) {
+  .support-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .support-feature-cell {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+    padding: 1.85rem 1rem;
+  }
+
+  .support-feature-cell:last-child {
+    border-bottom: none !important;
+  }
+}
+
+/* Force pure white font for Services cards section, Market Deepdive, Strategy Deepdive and Research Support */
 .services-intel-section h2,
 .services-intel-section h3,
 .services-intel-section p,
@@ -2460,8 +2683,17 @@ a.service-intel-card:focus-visible {
 .strategy-deepdive-section h4,
 .strategy-deepdive-section p,
 .strategy-deepdive-section strong,
-.strategy-deepdive-section * {
+.strategy-deepdive-section *,
+.support-deepdive-section h2,
+.support-deepdive-section h3,
+.support-deepdive-section h4,
+.support-deepdive-section p,
+.support-deepdive-section * {
   color: #FFFFFF !important;
+}
+
+.support-deepdive-section .support-highlight-region {
+  color: #7FA5EE !important;
 }
 
 .market-deepdive-letter {
