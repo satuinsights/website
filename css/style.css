@@ -750,7 +750,7 @@ p {
    Comprehensive Market Intelligence and Advisory Capabilities (Services Cards)
    ========================================================================== */
 .services-intel-section {
-  background-color: #292F7F !important;
+  background-color: #211555 !important;
   padding: 5rem 0 6rem;
 }
 
@@ -885,7 +885,7 @@ a.service-intel-card:focus-visible {
    Market Research Deep Dive Section (Below Our Services)
    ========================================================================== */
 .market-deepdive-section {
-  background-color: #292F7F !important;
+  background-color: #211555 !important;
   padding: 4rem 0 0 !important;
   scroll-margin-top: 1rem;
 }
@@ -1041,7 +1041,7 @@ a.service-intel-card:focus-visible {
    Strategy and Advisory Deep Dive Section
    ========================================================================== */
 .strategy-deepdive-section {
-  background-color: #292F7F !important;
+  background-color: #211555 !important;
   padding: 0 !important;
   scroll-margin-top: 1rem;
 }
@@ -1186,7 +1186,7 @@ a.service-intel-card:focus-visible {
 }
 
 .strategy-matrix-card {
-  background: #252b75;
+  background: #3A2F69;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
   padding: 1.85rem 1.65rem;
@@ -1201,7 +1201,7 @@ a.service-intel-card:focus-visible {
 
 .strategy-matrix-card:hover {
   transform: translateY(-4px);
-  background: #2f368c;
+  background: #473B7E;
   border-color: rgba(255, 255, 255, 0.45);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
 }
@@ -1229,7 +1229,7 @@ a.service-intel-card:focus-visible {
    Research Support Deep Dive Section
    ========================================================================== */
 .support-deepdive-section {
-  background-color: #292F7F !important;
+  background-color: #211555 !important;
   padding: 0 0 5.5rem !important;
   scroll-margin-top: 1rem;
 }
