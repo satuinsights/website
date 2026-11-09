@@ -1766,6 +1766,7 @@ a.service-intel-card:focus-visible {
   opacity: 1;
   pointer-events: none;
   z-index: 0;
+  transition: opacity 0.4s ease;
 }
 
 .no-bg-image::before {
@@ -1988,6 +1989,7 @@ a.service-intel-card:focus-visible {
   background-repeat: no-repeat;
   opacity: 1;
   pointer-events: none;
+  transition: opacity 0.4s ease;
 }
 
 @media (max-width: 991px) {
@@ -1996,15 +1998,18 @@ a.service-intel-card:focus-visible {
   }
 }
 
-/* Picture1.png Header Collision / Overlap Avoidance */
+/* Picture1.png Header Collision / Overlap Avoidance - Transparent Mode (0.1) */
 .ambient-bg.hide-picture1-overlap::after,
+.ambient-bg.transparent-picture1-overlap::after,
 .white-bg-wrapper.hide-picture1-overlap::before,
+.white-bg-wrapper.transparent-picture1-overlap::before,
 .hide-picture1-overlap::after,
-.hide-picture1-overlap::before {
-  display: none !important;
-  opacity: 0 !important;
-  background-image: none !important;
-  visibility: hidden !important;
+.hide-picture1-overlap::before,
+.transparent-picture1-overlap::after,
+.transparent-picture1-overlap::before {
+  opacity: 0.1 !important;
+  display: block !important;
+  visibility: visible !important;
 }
 
 /* Align layout with header */
