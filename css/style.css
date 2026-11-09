@@ -1996,6 +1996,17 @@ a.service-intel-card:focus-visible {
   }
 }
 
+/* Picture1.png Header Collision / Overlap Avoidance */
+.ambient-bg.hide-picture1-overlap::after,
+.white-bg-wrapper.hide-picture1-overlap::before,
+.hide-picture1-overlap::after,
+.hide-picture1-overlap::before {
+  display: none !important;
+  opacity: 0 !important;
+  background-image: none !important;
+  visibility: hidden !important;
+}
+
 /* Align layout with header */
 .narrow {
   max-width: var(--container-max) !important;

@@ -162,6 +162,88 @@
     });
   }
 
+  function initPicture1OverlapDetector() {
+    var ambientBg = document.querySelector('.ambient-bg');
+    var whiteWrapper = document.querySelector('.white-bg-wrapper:not(.no-bg-image)');
+    var siteNav = document.querySelector('.site-nav');
+
+    if (!ambientBg && !whiteWrapper) return;
+
+    function checkOverlap() {
+      if (!siteNav) return;
+
+      var navItems = siteNav.querySelectorAll('a');
+      if (!navItems.length) return;
+
+      var viewH = window.innerHeight;
+      // Picture1.png in CSS: background-size: auto 110vh (native 1377x2495)
+      var imgHeight = viewH * 1.10;
+      var imgWidth = imgHeight * (1377 / 2495);
+      var imgLeft = 0;
+      var imgRight = imgWidth;
+      var imgTop = (viewH - imgHeight) / 2;
+      var imgBottom = imgTop + imgHeight;
+
+      // 1. Check ambient-bg (hero background behind header)
+      if (ambientBg) {
+        var ambientOverlaps = false;
+        navItems.forEach(function (item) {
+          var rect = item.getBoundingClientRect();
+          if (rect.width > 0 && rect.height > 0) {
+            if (
+              imgLeft < rect.right &&
+              imgRight > rect.left &&
+              imgTop < rect.bottom &&
+              imgBottom > rect.top
+            ) {
+              ambientOverlaps = true;
+            }
+          }
+        });
+
+        if (ambientOverlaps) {
+          ambientBg.classList.add('hide-picture1-overlap');
+        } else {
+          ambientBg.classList.remove('hide-picture1-overlap');
+        }
+      }
+
+      // 2. Check white-bg-wrapper if present and contains Picture1.png
+      if (whiteWrapper) {
+        var wrapperRect = whiteWrapper.getBoundingClientRect();
+        var wrapImgTop = wrapperRect.top;
+        var wrapImgBottom = wrapperRect.top + imgHeight;
+        var wrapImgRight = imgWidth;
+
+        var wrapOverlaps = false;
+        navItems.forEach(function (item) {
+          var rect = item.getBoundingClientRect();
+          if (rect.width > 0 && rect.height > 0) {
+            if (
+              0 < rect.right &&
+              wrapImgRight > rect.left &&
+              wrapImgTop < rect.bottom &&
+              wrapImgBottom > rect.top
+            ) {
+              wrapOverlaps = true;
+            }
+          }
+        });
+
+        if (wrapOverlaps) {
+          whiteWrapper.classList.add('hide-picture1-overlap');
+        } else {
+          whiteWrapper.classList.remove('hide-picture1-overlap');
+        }
+      }
+    }
+
+    checkOverlap();
+    window.addEventListener('resize', checkOverlap);
+    window.addEventListener('scroll', checkOverlap, { passive: true });
+    window.addEventListener('load', checkOverlap);
+  }
+
   initPageLoad();
   initMobileNav();
   initStaggerGrids();
@@ -169,4 +251,5 @@
   initHeaderScroll();
   initSmoothLinks();
   initContactForm();
+  initPicture1OverlapDetector();
 })();
