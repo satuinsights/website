@@ -171,12 +171,6 @@
             <div class="strategy-deepdive-left">
               <h2 class="strategy-deepdive-title" style="color: #FFFFFF !important;">Insights<br>and Advisory</h2>
               <p class="strategy-deepdive-subtitle" style="color: #7FA5EE !important;">Turning insight<br>into direction.</p>
-              <!-- Decorative Left Flow Chevron -->
-              <div class="strategy-divider-chevron-left" aria-hidden="true">
-                <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
-                  <path d="M2 2L10 10L2 18" stroke="rgba(255, 255, 255, 0.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
             </div>
 
             <!-- Right Column: Statement & Matrix Framework -->
@@ -185,63 +179,158 @@
               <!-- Top Statement -->
               <div class="strategy-deepdive-statement">
                 <p style="color: #FFFFFF !important;">Research is most <strong style="color: #FFFFFF !important; font-weight: 700;">valuable</strong> when its findings are understood and put into context. We work with clients <strong style="color: #FFFFFF !important; font-weight: 700;">to interpret findings</strong>, explore <strong style="color: #FFFFFF !important; font-weight: 700;">their implications</strong> and identify <strong style="color: #FFFFFF !important; font-weight: 700;">opportunities</strong> and considerations to support <strong style="color: #FFFFFF !important; font-weight: 700;">better-informed business decisions</strong>.</p>
-                <!-- Decorative Top Flow Chevron -->
-                <div class="strategy-divider-chevron-top" aria-hidden="true">
-                  <svg width="20" height="12" viewBox="0 0 20 12" fill="none">
-                    <path d="M2 2L10 10L18 2" stroke="rgba(255, 255, 255, 0.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
               </div>
 
               <!-- Lower Matrix Area -->
               <div class="strategy-deepdive-lower">
                 <div class="strategy-matrix-wrap">
 
-                  <!-- Central Coordinate Axes -->
-                  <div class="matrix-axis-horizontal" aria-hidden="true">
-                    <svg class="matrix-arrow-right" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                      <path d="M2 2L10 6L2 10" stroke="rgba(255, 255, 255, 0.65)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- Standalone Left Border Chevron (Aligned with horizontal axis at top: 50%, not connected by line) -->
+                  <div class="matrix-border-chevron-left" aria-hidden="true">
+                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" style="overflow: visible;">
+                      <path d="M2 2L10 10L2 18" stroke="#C4B5FD" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
-                  <div class="matrix-axis-vertical" aria-hidden="true">
-                    <svg class="matrix-arrow-down" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                      <path d="M2 2L6 10L10 2" stroke="rgba(255, 255, 255, 0.65)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                  <!-- Standalone Top Border Chevron (Aligned with vertical axis at left: 50%, not connected by line) -->
+                  <div class="matrix-border-chevron-top" aria-hidden="true">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" style="overflow: visible;">
+                      <path d="M2 2L10 10L18 2" stroke="#C4B5FD" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
+                  </div>
+
+                  <!-- Horizontal Speed Arrow (With luminous aura/shadow matching reference) -->
+                  <div class="matrix-axis-horizontal" aria-hidden="true">
+                    <div class="matrix-speed-arrow-right">
+                      <svg width="44" height="36" viewBox="0 0 44 36" fill="none" style="overflow: visible;">
+                        <defs>
+                          <filter id="h-arrow-aura" x="-60%" y="-60%" width="220%" height="220%">
+                            <!-- Broad outer aura/shadow trailing slightly behind (dx="-2.5") -->
+                            <feDropShadow dx="-2.5" dy="0" stdDeviation="5.5" flood-color="#A594E6" flood-opacity="0.55" />
+                            <!-- Mid glowing lavender aura (dx="-1") -->
+                            <feDropShadow dx="-1" dy="0" stdDeviation="2.8" flood-color="#C4B5FD" flood-opacity="0.75" />
+                            <!-- Tight luminous inner halo -->
+                            <feDropShadow dx="0" dy="0" stdDeviation="1.2" flood-color="#FFFFFF" flood-opacity="0.6" />
+                          </filter>
+                          <linearGradient id="h-arrow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#C4B5FD" stop-opacity="0.85" />
+                            <stop offset="65%" stop-color="#EDE9FE" stop-opacity="0.95" />
+                            <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1" />
+                          </linearGradient>
+                        </defs>
+                        <!-- Main Arrow Head with glowing aura / shadow -->
+                        <path d="M23 4L41 18L23 32" stroke="url(#h-arrow-grad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#h-arrow-aura)" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- Vertical Speed Arrow (With luminous aura/shadow matching reference) -->
+                  <div class="matrix-axis-vertical" aria-hidden="true">
+                    <div class="matrix-speed-arrow-down">
+                      <svg width="36" height="44" viewBox="0 0 36 44" fill="none" style="overflow: visible;">
+                        <defs>
+                          <filter id="v-arrow-aura" x="-60%" y="-60%" width="220%" height="220%">
+                            <!-- Broad outer aura/shadow trailing slightly behind (dy="-2.5") -->
+                            <feDropShadow dx="0" dy="-2.5" stdDeviation="5.5" flood-color="#A594E6" flood-opacity="0.55" />
+                            <!-- Mid glowing lavender aura (dy="-1") -->
+                            <feDropShadow dx="0" dy="-1" stdDeviation="2.8" flood-color="#C4B5FD" flood-opacity="0.75" />
+                            <!-- Tight luminous inner halo -->
+                            <feDropShadow dx="0" dy="0" stdDeviation="1.2" flood-color="#FFFFFF" flood-opacity="0.6" />
+                          </filter>
+                          <linearGradient id="v-arrow-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#C4B5FD" stop-opacity="0.85" />
+                            <stop offset="65%" stop-color="#EDE9FE" stop-opacity="0.95" />
+                            <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1" />
+                          </linearGradient>
+                        </defs>
+                        <!-- Main Arrow Head with glowing aura / shadow -->
+                        <path d="M4 23L18 41L32 23" stroke="url(#v-arrow-grad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#v-arrow-aura)" />
+                      </svg>
+                    </div>
                   </div>
 
                   <!-- 2x2 Matrix Cards -->
                   <div class="strategy-matrix-grid">
 
-                    <!-- Quadrant 1: Top Left -->
+                    <!-- Quadrant 1: Top Left - Research Insights & Recommendations -->
                     <div class="strategy-matrix-card">
                       <span class="strategy-matrix-text" style="color: #FFFFFF !important;">Research insights and recommendations</span>
-                      <svg class="strategy-matrix-chevron" width="14" height="24" viewBox="0 0 14 24" fill="none" aria-hidden="true">
-                        <path d="M2 2L12 12L2 22" stroke="rgba(255, 255, 255, 0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                      <div class="strategy-card-art" aria-hidden="true">
+                        <svg viewBox="0 0 130 100" fill="none">
+                          <!-- Scanning Radar Arc -->
+                          <path d="M28 18A48 48 0 0 1 28 82" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.2" stroke-dasharray="3 3"/>
+                          <!-- Focus Rays -->
+                          <path d="M30 26L68 50" stroke="rgba(255, 255, 255, 0.55)" stroke-width="1.75" stroke-linecap="round"/>
+                          <path d="M18 50L68 50" stroke="rgba(255, 255, 255, 0.55)" stroke-width="1.75" stroke-linecap="round"/>
+                          <path d="M30 74L68 50" stroke="rgba(255, 255, 255, 0.55)" stroke-width="1.75" stroke-linecap="round"/>
+                          <!-- Recommendation Forward Vector -->
+                          <path d="M68 50H112" stroke="#7FA5EE" stroke-width="2" stroke-linecap="round"/>
+                          <!-- Core Insight Node & Terminal Node -->
+                          <circle cx="68" cy="50" r="4.5" fill="#7FA5EE"/>
+                          <circle cx="68" cy="50" r="2" fill="#FFFFFF"/>
+                          <circle cx="112" cy="50" r="3" fill="#7FA5EE"/>
+                        </svg>
+                      </div>
                     </div>
 
-                    <!-- Quadrant 2: Top Right -->
+                    <!-- Quadrant 2: Top Right - Product & Service Evaluation -->
                     <div class="strategy-matrix-card">
                       <span class="strategy-matrix-text" style="color: #FFFFFF !important;">Product and service evaluation</span>
-                      <svg class="strategy-matrix-chevron" width="14" height="24" viewBox="0 0 14 24" fill="none" aria-hidden="true">
-                        <path d="M2 2L12 12L2 22" stroke="rgba(255, 255, 255, 0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                      <div class="strategy-card-art" aria-hidden="true">
+                        <svg viewBox="0 0 130 100" fill="none">
+                          <!-- Benchmark Baseline Tracks -->
+                          <line x1="28" y1="26" x2="112" y2="26" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.2" stroke-dasharray="3 3"/>
+                          <line x1="18" y1="50" x2="114" y2="50" stroke="rgba(255, 255, 255, 0.35)" stroke-width="1.2"/>
+                          <line x1="28" y1="74" x2="112" y2="74" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.2" stroke-dasharray="3 3"/>
+                          <!-- Ascending Performance Evaluation Curve -->
+                          <path d="M24 82C50 80 58 56 76 42C88 32 98 26 112 24" stroke="#7FA5EE" stroke-width="2.2" stroke-linecap="round"/>
+                          <!-- Milestone Stage Points -->
+                          <circle cx="48" cy="70" r="3" fill="#7FA5EE"/>
+                          <circle cx="76" cy="42" r="3" fill="#7FA5EE"/>
+                          <circle cx="112" cy="24" r="3.5" fill="#FFFFFF"/>
+                        </svg>
+                      </div>
                     </div>
 
-                    <!-- Quadrant 3: Bottom Left -->
+                    <!-- Quadrant 3: Bottom Left - Brand & Positioning Insights -->
                     <div class="strategy-matrix-card">
                       <span class="strategy-matrix-text" style="color: #FFFFFF !important;">Brand and positioning insights</span>
-                      <svg class="strategy-matrix-chevron" width="14" height="24" viewBox="0 0 14 24" fill="none" aria-hidden="true">
-                        <path d="M2 2L12 12L2 22" stroke="rgba(255, 255, 255, 0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                      <div class="strategy-card-art" aria-hidden="true">
+                        <svg viewBox="0 0 130 100" fill="none">
+                          <!-- 2D Positioning Quadrant Matrix Crosshair -->
+                          <line x1="26" y1="68" x2="114" y2="68" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.2"/>
+                          <line x1="66" y1="90" x2="66" y2="16" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.2"/>
+                          <!-- Brand Trajectory Elevation Curve -->
+                          <path d="M26 80C56 78 76 56 104 22" stroke="#7FA5EE" stroke-width="2.2" stroke-linecap="round"/>
+                          <!-- North Star Brand Diamond -->
+                          <polygon points="104,14 109,22 104,30 99,22" fill="#7FA5EE"/>
+                          <circle cx="104" cy="22" r="1.5" fill="#FFFFFF"/>
+                        </svg>
+                      </div>
                     </div>
 
-                    <!-- Quadrant 4: Bottom Right -->
+                    <!-- Quadrant 4: Bottom Right - Stakeholder Discussions & Findings Interpretation -->
                     <div class="strategy-matrix-card">
                       <span class="strategy-matrix-text" style="color: #FFFFFF !important;">Stakeholder discussions and findings interpretation</span>
-                      <svg class="strategy-matrix-chevron" width="14" height="24" viewBox="0 0 14 24" fill="none" aria-hidden="true">
-                        <path d="M2 2L12 12L2 22" stroke="rgba(255, 255, 255, 0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                      <div class="strategy-card-art" aria-hidden="true">
+                        <svg viewBox="0 0 130 100" fill="none">
+                          <!-- Multi-Stakeholder Stream 1 -->
+                          <path d="M22 24C48 24 58 50 76 50" stroke="rgba(255, 255, 255, 0.6)" stroke-width="1.75" stroke-linecap="round"/>
+                          <circle cx="22" cy="24" r="3" fill="#7FA5EE"/>
+                          <!-- Multi-Stakeholder Stream 2 -->
+                          <path d="M16 50H76" stroke="rgba(255, 255, 255, 0.6)" stroke-width="1.75" stroke-linecap="round"/>
+                          <circle cx="16" cy="50" r="3" fill="#7FA5EE"/>
+                          <!-- Multi-Stakeholder Stream 3 -->
+                          <path d="M22 76C48 76 58 50 76 50" stroke="rgba(255, 255, 255, 0.6)" stroke-width="1.75" stroke-linecap="round"/>
+                          <circle cx="22" cy="76" r="3" fill="#7FA5EE"/>
+                          <!-- Unified Consensus Beam -->
+                          <path d="M76 50H114" stroke="#7FA5EE" stroke-width="2.25" stroke-linecap="round"/>
+                          <!-- Consensus Node Hub & Terminal Node -->
+                          <circle cx="76" cy="50" r="4.5" fill="#FFFFFF"/>
+                          <circle cx="76" cy="50" r="2" fill="#7FA5EE"/>
+                          <circle cx="114" cy="50" r="3" fill="#7FA5EE"/>
+                        </svg>
+                      </div>
                     </div>
 
                   </div>
