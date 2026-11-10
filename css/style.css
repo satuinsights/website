@@ -855,7 +855,7 @@ a.service-intel-card:focus-visible {
   font-size: 1.05rem;
   font-style: italic;
   font-weight: 400;
-  color: #FFFFFF !important;
+  color: #7FA5EE !important;
   line-height: 1.4;
   min-height: 2.8em;
   display: flex;
@@ -922,7 +922,7 @@ a.service-intel-card:focus-visible {
   font-style: italic;
   font-weight: 400;
   line-height: 1.35;
-  color: rgba(255, 255, 255, 0.88) !important;
+  color: #7FA5EE !important;
   text-align: left !important;
   margin: 0 !important;
 }
@@ -996,7 +996,7 @@ a.service-intel-card:focus-visible {
 .market-deepdive-item h4 {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #FFFFFF !important;
+  color: #7FA5EE !important;
   margin-bottom: 0.5rem;
   letter-spacing: -0.01em;
 }
@@ -1078,7 +1078,7 @@ a.service-intel-card:focus-visible {
   font-style: italic;
   font-weight: 400;
   line-height: 1.35;
-  color: rgba(255, 255, 255, 0.88) !important;
+  color: #7FA5EE !important;
   text-align: left !important;
   margin: 0 !important;
 }
@@ -1265,7 +1265,7 @@ a.service-intel-card:focus-visible {
   font-style: italic;
   font-weight: 400;
   line-height: 1.35;
-  color: rgba(255, 255, 255, 0.88) !important;
+  color: #7FA5EE !important;
   text-align: left !important;
   margin: 0 !important;
 }
@@ -1292,6 +1292,7 @@ a.service-intel-card:focus-visible {
   max-width: 740px;
 }
 
+.support-highlight-region,
 .support-deepdive-statement .support-highlight-region {
   color: #7FA5EE !important;
   font-weight: 600;
@@ -2751,7 +2752,12 @@ a.service-intel-card:focus-visible {
   color: #FFFFFF !important;
 }
 
-.support-deepdive-section .support-highlight-region {
+.support-deepdive-section .support-highlight-region,
+.service-intel-subtitle,
+.services-intel-section .service-intel-subtitle,
+.market-deepdive-subtitle,
+.strategy-deepdive-subtitle,
+.support-deepdive-subtitle {
   color: #7FA5EE !important;
 }
 
