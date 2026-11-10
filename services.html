@@ -185,17 +185,41 @@
               <div class="strategy-deepdive-lower">
                 <div class="strategy-matrix-wrap">
 
-                  <!-- Standalone Left Border Chevron (Aligned with horizontal axis at top: 50%, not connected by line) -->
+                  <!-- Standalone Left Border Chevron (Centered on vertical divider at left: -4rem, glowing aura) -->
                   <div class="matrix-border-chevron-left" aria-hidden="true">
-                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" style="overflow: visible;">
-                      <path d="M2 2L10 10L2 18" stroke="#C4B5FD" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" style="overflow: visible;">
+                      <defs>
+                        <filter id="border-left-aura" x="-60%" y="-60%" width="220%" height="220%">
+                          <feDropShadow dx="-2" dy="0" stdDeviation="5" flood-color="#A594E6" flood-opacity="0.55" />
+                          <feDropShadow dx="-0.8" dy="0" stdDeviation="2.6" flood-color="#C4B5FD" flood-opacity="0.75" />
+                          <feDropShadow dx="0" dy="0" stdDeviation="1.2" flood-color="#FFFFFF" flood-opacity="0.6" />
+                        </filter>
+                        <linearGradient id="border-left-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stop-color="#C4B5FD" stop-opacity="0.85" />
+                          <stop offset="65%" stop-color="#EDE9FE" stop-opacity="0.95" />
+                          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1" />
+                        </linearGradient>
+                      </defs>
+                      <path d="M9 4L27 18L9 32" stroke="url(#border-left-grad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#border-left-aura)" />
                     </svg>
                   </div>
 
-                  <!-- Standalone Top Border Chevron (Aligned with vertical axis at left: 50%, not connected by line) -->
+                  <!-- Standalone Top Border Chevron (Centered on vertical axis at left: 50%, pointing RIGHT along divider with glowing aura) -->
                   <div class="matrix-border-chevron-top" aria-hidden="true">
-                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" style="overflow: visible;">
-                      <path d="M2 2L10 10L18 2" stroke="#C4B5FD" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" style="overflow: visible;">
+                      <defs>
+                        <filter id="border-top-aura" x="-60%" y="-60%" width="220%" height="220%">
+                          <feDropShadow dx="-2" dy="0" stdDeviation="5" flood-color="#A594E6" flood-opacity="0.55" />
+                          <feDropShadow dx="-0.8" dy="0" stdDeviation="2.6" flood-color="#C4B5FD" flood-opacity="0.75" />
+                          <feDropShadow dx="0" dy="0" stdDeviation="1.2" flood-color="#FFFFFF" flood-opacity="0.6" />
+                        </filter>
+                        <linearGradient id="border-top-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stop-color="#C4B5FD" stop-opacity="0.85" />
+                          <stop offset="65%" stop-color="#EDE9FE" stop-opacity="0.95" />
+                          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1" />
+                        </linearGradient>
+                      </defs>
+                      <path d="M9 4L27 18L9 32" stroke="url(#border-top-grad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#border-top-aura)" />
                     </svg>
                   </div>
 
